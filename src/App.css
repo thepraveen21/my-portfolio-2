@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif; /* You can import this from Google Fonts */
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
