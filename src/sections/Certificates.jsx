@@ -38,19 +38,27 @@ const Certificates = () => {
       <div className="max-w-7xl mx-auto">
         {/* Massive Header - Exact match to Journey & Projects */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
           viewport={{ once: true }}
-          className="mb-32"
+          className="mb-20 max-w-7xl"
         >
-          <p className="text-gray-500 uppercase tracking-[0.6em] text-sm font-black mb-8">
+          <motion.h2 
+            className="text-gray-500 uppercase tracking-[0.3em] text-xs mb-4"
+            whileInView={{ letterSpacing: "0.4em" }}
+            transition={{ duration: 0.6 }}
+          >
             Verified
-          </p>
-          <h2 className="text-[80px] md:text-[150px] lg:text-[180px] font-[900] text-white tracking-tighter leading-[0.75] uppercase">
-            SKILLS & <br /> 
-            <span className="text-sky-400">CREDENTIALS.</span>
-          </h2>
+          </motion.h2>
+          <motion.h3 
+            className="text-5xl md:text-7xl font-black tracking-tighter text-white"
+            whileInView={{ scale: 1 }}
+            initial={{ scale: 0.95 }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+          >
+            SKILLS & <br /> <span className="text-white/40">CREDENTIALS.</span>
+          </motion.h3>
         </motion.div>
 
         {/* Certificate Grid */}
