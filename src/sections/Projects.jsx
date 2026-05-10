@@ -46,7 +46,7 @@ const Projects = () => {
   }, [controls]);
 
   return (
-    <section className="bg-black py-20 overflow-hidden px-10 md:px-20 relative">
+    <section id="projects" className="bg-black py-20 overflow-hidden px-10 md:px-20 relative">
       {/* Decorative Glow Background - Emerald instead of sky blue */}
       <div className="absolute top-1/2 right-[-5%] w-80 h-80 bg-emerald-600/10 blur-[120px] rounded-full -z-10" />
 
