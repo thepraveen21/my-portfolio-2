@@ -3,7 +3,7 @@ import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Journey from "./sections/Journey";
 import Certificates from "./sections/Certificates";
 
@@ -17,7 +17,7 @@ function App() {
       <Certificates />
       <Journey />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

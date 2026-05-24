@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, ArrowRight } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Contact = () => {
   return (
@@ -180,17 +181,74 @@ const Contact = () => {
 
       {/* Footer is now integrated */}
       <motion.footer 
-        className="mt-32 pt-10 border-t border-white/10 text-[10px] text-gray-600 uppercase tracking-[0.3em] font-bold flex justify-between gap-6 max-w-7xl mx-auto z-10 relative"
+        className="mt-32 max-w-7xl mx-auto z-10 relative"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <p>© 2026 PRAVEEN SHAYAMAL / IT STUDENT / DEVELOPER</p>
-        <div className="flex gap-8">
-          <motion.span whileHover={{ color: "#a78bfa", scale: 1.1 }} transition={{ duration: 0.2 }}>LinkedIn</motion.span>
-          <motion.span whileHover={{ color: "#a78bfa", scale: 1.1 }} transition={{ duration: 0.2 }}>GitHub</motion.span>
-          <motion.span whileHover={{ color: "#a78bfa", scale: 1.1 }} transition={{ duration: 0.2 }}>Fiverr</motion.span>
+        {/* Top Footer Section */}
+        <div className="pt-10 border-t border-white/10 text-[10px] text-gray-600 uppercase tracking-[0.3em] font-bold flex justify-between items-center gap-6 pb-16">
+          <div className="flex items-center gap-4">
+            <motion.img 
+              src={logo} 
+              alt="Logo"
+              className="h-25 w-25 object-contain"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            />
+            <p>© 2026 PRAVEEN SHAYAMAL / IT STUDENT / DEVELOPER</p>
+          </div>
+          <div className="flex gap-8">
+            <motion.span whileHover={{ color: "#a78bfa", scale: 1.1 }} transition={{ duration: 0.2 }}>LinkedIn</motion.span>
+            <motion.span whileHover={{ color: "#a78bfa", scale: 1.1 }} transition={{ duration: 0.2 }}>GitHub</motion.span>
+            <motion.span whileHover={{ color: "#a78bfa", scale: 1.1 }} transition={{ duration: 0.2 }}>Fiverr</motion.span>
+          </div>
+        </div>
+
+        {/* Bottom Footer Section - Multi Column Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 py-12 border-t border-white/10">
+          <motion.div 
+            className="flex flex-col gap-4"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-gray-600">Navigation</h4>
+            <ul className="flex flex-col gap-3 text-sm font-medium text-gray-400">
+              <li className="hover:text-sky-400 cursor-pointer transition-colors">Home</li>
+              <li className="hover:text-sky-400 cursor-pointer transition-colors">Services</li>
+              <li className="hover:text-sky-400 cursor-pointer transition-colors">Projects</li>
+            </ul>
+          </motion.div>
+
+          <motion.div 
+            className="flex flex-col gap-4"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-gray-600">Services</h4>
+            <ul className="flex flex-col gap-3 text-sm font-medium text-gray-400">
+              <li>Full-Stack Dev</li>
+              <li>SaaS UI/UX</li>
+              <li>System Logic</li>
+            </ul>
+          </motion.div>
+
+          <motion.div 
+            className="flex flex-col gap-4"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-gray-600">Location</h4>
+            <p className="text-sm font-medium text-gray-400">Ratnapura, Sri Lanka</p>
+            <p className="text-xs text-gray-600 font-mono">06.6828° N, 80.3992° E</p>
+          </motion.div>
         </div>
       </motion.footer>
     </section>

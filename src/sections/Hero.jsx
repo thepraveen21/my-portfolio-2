@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Myimage from "../assets/Myimage.png";
 
 const Hero = () => {
   return (
@@ -31,6 +32,22 @@ const Hero = () => {
           PRAVEEN
         </motion.span>
       </motion.h1>
+
+      {/* 2.5 Image Under Name */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100, damping: 25 }}
+        className="mt-8 mb-8"
+      >
+        <motion.img
+          src={Myimage}
+          alt="Praveen"
+          className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-2 border-sky-500/30 shadow-lg shadow-sky-500/20"
+          whileHover={{ scale: 1.05, borderColor: "#0ea5e9" }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        />
+      </motion.div>
 
       {/* 3. Gradient Button */}
       <motion.button
